@@ -25,7 +25,7 @@ This is reproducible work from [Ekstraksi Informasi e-KTP dengan Google Cloud Fu
 gcloud auth activate-service-account ektp-ocr-2020@appspot.gserviceaccount.com --key-file=D:\nodejs\ktp-ocr\ektp-ocr-2020-a3d719375b7d.json --project=ektp-ocr-2020
 ```
 
-1. Deploy HTTP
+###1. Deploy HTTP
 
 ```shell
 $ cd http-ktp
@@ -33,7 +33,7 @@ $ npm i
 $ gcloud functions deploy http-ktp --entry-point uploadKtp --trigger-http --runtime=python37
 ```
 
-2. Deploy KTP Image Event Trigger
+###2. Deploy KTP Image Event Trigger
 
 ```shell
 $ cd ktp-iamge-event-trigger
@@ -41,7 +41,7 @@ $ npm i
 $ gcloud functions deploy processImageFromGCSEvent --trigger-resource uploaded_ektp --trigger-event google.storage.object.finalize
 ```
 
-3. Deploy Extraction Data
+###3. Deploy Extraction Data
 
 ```shell
 $ gcloud functions deploy extract_ktp --runtime python37 --trigger-topic ektp-text-extracted
@@ -54,3 +54,5 @@ View Stackdriver logs from `extract-ktp` function.
 ### Love it?
 
 Please support me by **stars* this Github repo. Thank you!
+
+## JIKA ADA ERROR BACA PETUNJUK GOOGLE CLOUD DAN SERING2 MAIN KE STACKOVERFLOW :)
