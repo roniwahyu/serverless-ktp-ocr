@@ -20,6 +20,11 @@ This is reproducible work from [Ekstraksi Informasi e-KTP dengan Google Cloud Fu
 
 ### How to deploy
 
+### Siapkan Credential dan pastikan bahwa credential ditujukan untuk project yang tepat terlebih dahulu
+```shell
+gcloud auth activate-service-account ektp-ocr-2020@appspot.gserviceaccount.com --key-file=D:\nodejs\ktp-ocr\ektp-ocr-2020-a3d719375b7d.json --project=ektp-ocr-2020
+```
+
 1. Deploy HTTP
 
 ```shell
