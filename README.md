@@ -25,7 +25,7 @@ This is reproducible work from [Ekstraksi Informasi e-KTP dengan Google Cloud Fu
 ```shell
 $ cd http-ktp
 $ npm i
-$ gcloud functions deploy http-ktp --entry-point uploadKtp --trigger-http
+$ gcloud functions deploy http-ktp --entry-point uploadKtp --trigger-http --runtime=python37
 ```
 
 2. Deploy KTP Image Event Trigger
